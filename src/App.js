@@ -50,7 +50,7 @@ export default function App() {
 					type="text"
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
-					placeholder="Try searching for cats 😸"
+					placeholder="Try searching for cats 😸 or dogs 🐶..."
 				/>
 				<button>Search</button>
 			</form>
@@ -68,7 +68,7 @@ export default function App() {
 							rel="noopener noreferrer"
 							className="image"
 							key={index}
-							title={image.alt_description}
+							title={`${image.alt_description} \nBy @${image.user.username}`}
 						>
 							<img src={image.urls.regular} alt={image.alt_description} />
 						</a>
